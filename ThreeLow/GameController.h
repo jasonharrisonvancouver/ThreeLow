@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Dice.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -14,6 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property NSMutableArray<Dice *> *allDice;
 @property NSMutableArray<Dice *> *heldDice;
+
+- (void)holdDie:(int)index;
 
 @end
 
