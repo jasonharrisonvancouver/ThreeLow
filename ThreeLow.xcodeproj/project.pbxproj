@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		9F8E816021E8390500D35B79 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F8E815F21E8390500D35B79 /* main.m */; };
 		9F8E816821E8398400D35B79 /* Dice.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F8E816721E8398400D35B79 /* Dice.m */; };
+		9F8E816B21E83DAF00D35B79 /* HandfulOfDice.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F8E816A21E83DAF00D35B79 /* HandfulOfDice.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +29,8 @@
 		9F8E815F21E8390500D35B79 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9F8E816621E8398400D35B79 /* Dice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Dice.h; sourceTree = "<group>"; };
 		9F8E816721E8398400D35B79 /* Dice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Dice.m; sourceTree = "<group>"; };
+		9F8E816921E83DAF00D35B79 /* HandfulOfDice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HandfulOfDice.h; sourceTree = "<group>"; };
+		9F8E816A21E83DAF00D35B79 /* HandfulOfDice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HandfulOfDice.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +65,8 @@
 			children = (
 				9F8E815F21E8390500D35B79 /* main.m */,
 				9F8E816621E8398400D35B79 /* Dice.h */,
+				9F8E816921E83DAF00D35B79 /* HandfulOfDice.h */,
+				9F8E816A21E83DAF00D35B79 /* HandfulOfDice.m */,
 				9F8E816721E8398400D35B79 /* Dice.m */,
 			);
 			path = ThreeLow;
@@ -123,6 +128,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F8E816B21E83DAF00D35B79 /* HandfulOfDice.m in Sources */,
 				9F8E816821E8398400D35B79 /* Dice.m in Sources */,
 				9F8E816021E8390500D35B79 /* main.m in Sources */,
 			);

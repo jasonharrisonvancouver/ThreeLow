@@ -8,30 +8,46 @@
 
 #import <Foundation/Foundation.h>
 #import "Dice.h"
+#import "HandfulOfDice.h"
+
+
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        Dice *dice1 = [[Dice alloc] init];
-        [dice1 rollNewRandomValue];
-        NSLog(@"dice 1 number is %i and value is %@", [dice1 number], [dice1 value]);
         
-        Dice *dice2 = [[Dice alloc] init];
-        [dice2 rollNewRandomValue];
-        NSLog(@"dice 2 number is %i and value is %@", [dice2 number], [dice2 value]);
-        
-        Dice *dice3 = [[Dice alloc] init];
-        [dice3 rollNewRandomValue];
-        NSLog(@"dice 3 number is %i and value is %@", [dice3 number], [dice3 value]);
-        
-        Dice *dice4 = [[Dice alloc] init];
-        [dice4 rollNewRandomValue];
-        NSLog(@"dice 4 number is %i and value is %@", [dice4 number], [dice4 value]);
-        
-        Dice *dice5 = [[Dice alloc] init];
-        [dice5 rollNewRandomValue];
-        NSLog(@"dice 5 number is %i and value is %@", [dice5 number], [dice5 value]);
-        
+        while(YES){
+            // 255 unit long array of characters
+            char inputNumber[255];
+            
+            printf("To play, type roll: ");
+            // limit input to max 255 characters
+            fgets(inputNumber, 255, stdin);
+            
+            // print as a c string
+            printf("Your string is %s\n", inputNumber);
+            
+            // convert char array to an NSString object
+            NSString *inputNumberString = [NSString stringWithUTF8String:inputNumber];
+            
+           // NSString *newString = [oldString substringToIndex:[oldString length]-1];
 
+            
+            
+            inputNumberString = [inputNumberString substringToIndex:[inputNumberString length]-1];
+            
+            //        // print NSString object
+            //        NSLog(@"Number was: %@", inputNumberString);
+            //
+            //        int userNumber = [inputNumberString intValue];
+            //
+            
+            if([inputNumberString isEqualToString:@"roll"]){
+                HandfulOfDice *handfulOfDice = [[HandfulOfDice alloc] init];
+                NSArray<Dice *> *arrayOfDice = [handfulOfDice rollDice];
+            }
+            
+        }
+        
     }
     return 0;
 }
