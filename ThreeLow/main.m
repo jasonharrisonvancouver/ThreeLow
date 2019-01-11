@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "Dice.h"
 #import "HandfulOfDice.h"
+#import "GameController.h"
 
 
 
@@ -41,9 +42,14 @@ int main(int argc, const char * argv[]) {
             //        int userNumber = [inputNumberString intValue];
             //
             
+            GameController *gameController = [[GameController alloc] init];
+            
             if([inputNumberString isEqualToString:@"roll"]){
                 HandfulOfDice *handfulOfDice = [[HandfulOfDice alloc] init];
-                NSArray<Dice *> *arrayOfDice = [handfulOfDice rollDice];
+                NSMutableArray<Dice *> *arrayOfDice = [handfulOfDice rollDice];
+                
+                gameController.allDice = arrayOfDice;
+                
             }
             
         }

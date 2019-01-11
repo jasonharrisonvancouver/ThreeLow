@@ -11,7 +11,7 @@
 @implementation HandfulOfDice
 
 
-- (NSArray<Dice *> *)rollDice{
+- (NSMutableArray<Dice *> *)rollDice{
     Dice *dice1 = [[Dice alloc] init];
     [dice1 rollNewRandomValue];
     NSLog(@"dice 1 number is %i and value is %@", [dice1 number], [dice1 value]);
@@ -32,7 +32,7 @@
     [dice5 rollNewRandomValue];
     NSLog(@"dice 5 number is %i and value is %@", [dice5 number], [dice5 value]);
     
-    NSArray<Dice*> *dice = @[dice1, dice2, dice3, dice4, dice5];
+    NSMutableArray<Dice*> *dice = @[dice1, dice2, dice3, dice4, dice5];
     return dice;
 }
 
